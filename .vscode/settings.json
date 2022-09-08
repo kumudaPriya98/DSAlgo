@@ -6,6 +6,11 @@
         "xiosbase": "cpp",
         "unordered_map": "cpp",
         "stack": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "xstring": "cpp",
+        "set": "cpp",
+        "xtree": "cpp"
     }
 }
