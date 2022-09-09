@@ -11,6 +11,9 @@
         "list": "cpp",
         "xstring": "cpp",
         "set": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "skylineproblem2": "cpp",
+        "algorithm": "cpp",
+        "xhash": "cpp"
     }
 }

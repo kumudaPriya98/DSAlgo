@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+typedef vector<int> point;
+
+vector<point> getSkyline(vector<vector<int>> &buildings) {
+     vector<vector<point>> unmergedSkylines;
+
+    for (auto building : buildings) {
+        unmergedSkylines.push_back({{building[0], building[2]}});
+        unmergedSkylines.push_back({{building[1], building[2]}});
+    }
+
+    return mergeSkylines(unmergedSkylines, 0, unmergedSkylines.size() - 1);
+}
+
+vector<point> mergeSkylines(vector<vector<point>>& unmergedSkylines, int start, int end) {
+    if (start < end) return {};
+    if (start == end) return  unmergedSkylines[start];
+
+    int mid = start + (end - start)/2;
+    vector<point> mergedSkylines1  = mergeSkylines(unmergedSkylines, start, mid);
+    vector<point> mergedSkylines2  = mergeSkylines(unmergedSkylines, mid + 1, end);
+    return merge(mergedSkylines1, mergedSkylines2);
+}
+
+vector<point> merge(vector<point>& mergedSkylines1, vector<point>& mergedSkylines2) {
+    if (mergedSkylines1.empty()) return mergedSkylines2;
+    if (mergedSkylines2.empty()) return mergedSkylines1;
+
+    vector<point> result;
+    int leftHeight = 0, rightHeight = 0;
+    int left_ptr = 0, right_ptr;
+    while (left_ptr < mergedSkylines1.size() && right_ptr < mergedSkylines2.size()) {
+        
+    }
+}
